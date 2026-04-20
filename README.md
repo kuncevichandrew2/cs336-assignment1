@@ -36,19 +36,8 @@ First run will train a BPE tokenizer (cached to `data/vocab.pkl`, `data/merges.p
 and tokenize the corpora (cached to `data/train.npy`, `data/valid.npy`).
 Checkpoints are saved to `checkpoints/model.pt`.
 
-### Common overrides
-
-```sh
-uv run train.py \
-  --train-text data/owt_train.txt \
-  --valid-text data/owt_valid.txt \
-  --vocab-size 32000 \
-  --d-model 768 --num-layers 6 --num-heads 12 --d-ff 2048 \
-  --context-length 512 --batch-size 16 \
-  --max-iters 20000 --lr-max 3e-4
-```
-
-Resume: add `--resume`. See `train.py` for all flags.
+All hyperparameters (data paths, model size, optimizer, logging) are defined as
+constants at the top of `train.py` — edit them there to change a run.
 
 ## Layout
 
