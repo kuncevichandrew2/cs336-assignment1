@@ -13,10 +13,10 @@ env/
 .mypy_cache/
 
 # Data & checkpoints
-data/
 checkpoints/
-*.npy
-*.pkl
+data/*.txt
+data/*.txt.gz
+data/*.npy
 *.pt
 
 # IDE / OS
