@@ -23,15 +23,15 @@ from cs336_basics.training import (
 
 # ---- config ----
 # data
-TRAIN_TEXT = "data/TinyStoriesV2-GPT4-train.txt"
-VALID_TEXT = "data/TinyStoriesV2-GPT4-valid.txt"
-TRAIN_TOKENS = "data/train.npy"
-VALID_TOKENS = "data/valid.npy"
-VOCAB_PATH = "data/vocab.pkl"
-MERGES_PATH = "data/merges.pkl"
-VOCAB_SIZE = 10_000
+TRAIN_TEXT = "data/owt_train.txt"
+VALID_TEXT = "data/owt_valid.txt"
+TRAIN_TOKENS = "data/owt_train.npy"
+VALID_TOKENS = "data/owt_valid.npy"
+VOCAB_PATH = "data/owt_vocab_32k.pkl"
+MERGES_PATH = "data/owt_merges_32k.pkl"
+VOCAB_SIZE = 32_000
 # model
-CONTEXT_LENGTH = 256
+CONTEXT_LENGTH = 512  # leaderboard validates at 512
 D_MODEL = 512
 NUM_LAYERS = 4
 NUM_HEADS = 16
